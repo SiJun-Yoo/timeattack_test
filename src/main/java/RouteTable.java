@@ -16,9 +16,9 @@ public class RouteTable {
 
     public void addSubnet(Subnet subnet) {
         this.subnetList.add(subnet);
-        subnet.setRouteTable(this);
+        route(subnet);
     }
-    public void route(){
-
+    public void route(Subnet subnet){
+        subnet.setRouteTable(this);
     }
 }
